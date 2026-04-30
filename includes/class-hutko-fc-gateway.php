@@ -66,7 +66,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 			'slug'               => HUTKO_FC_GATEWAY_SLUG,
 			'label'              => 'Hutko',
 			'admin_title'        => 'Hutko',
-			'description'        => __( 'Cards, Apple Pay, Google Pay via Hutko', 'hutko-fluentcart-payment-gateway' ),
+			'description'        => __( 'Cards, Apple Pay, Google Pay via hutko', 'hutko-fluentcart-payment-gateway' ),
 			'logo'               => HUTKO_FC_URL . 'assets/img/oplata_logo_cards.svg',
 			'icon'               => HUTKO_FC_URL . 'assets/img/oplata_logo_cards.svg',
 			'brand_color'        => '#1873B4',
@@ -107,7 +107,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 
 			return array(
 				'status'      => 'success',
-				'message'     => __( 'Redirecting to Hutko...', 'hutko-fluentcart-payment-gateway' ),
+				'message'     => __( 'Redirecting to hutko...', 'hutko-fluentcart-payment-gateway' ),
 				'redirect_to' => $redirect,
 			);
 		} catch ( Exception $e ) {
@@ -231,7 +231,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 		} catch ( Exception $e ) {
 			if ( function_exists( 'fluent_cart_error_log' ) ) {
 				fluent_cart_error_log(
-					'Hutko IPN Error',
+					'hutko IPN Error',
 					$e->getMessage() . ' | Body: ' . wp_json_encode( $requestBody )
 				);
 			}
@@ -290,7 +290,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 			if ( empty( $hutko_order_id ) ) {
 				return new \WP_Error(
 					'hutko_refund',
-					__( 'No Hutko order ID stored on this transaction.', 'hutko-fluentcart-payment-gateway' )
+					__( 'No hutko order ID stored on this transaction.', 'hutko-fluentcart-payment-gateway' )
 				);
 			}
 
@@ -333,26 +333,26 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 		return array(
 			'is_active'         => array(
 				'type'  => 'checkbox',
-				'label' => __( 'Enable Hutko', 'hutko-fluentcart-payment-gateway' ),
+				'label' => __( 'Enable hutko', 'hutko-fluentcart-payment-gateway' ),
 				'value' => $this->settings->get( 'is_active' ),
 			),
 			'test_mode'         => array(
 				'type'        => 'checkbox',
 				'label'       => __( 'Test mode', 'hutko-fluentcart-payment-gateway' ),
 				'value'       => $this->settings->get( 'test_mode' ),
-				'description' => __( 'Use Hutko test merchant credentials.', 'hutko-fluentcart-payment-gateway' ),
+				'description' => __( 'Use hutko test merchant credentials.', 'hutko-fluentcart-payment-gateway' ),
 			),
 			'merchant_id'       => array(
 				'type'        => 'text',
 				'label'       => __( 'Merchant ID', 'hutko-fluentcart-payment-gateway' ),
 				'value'       => $this->settings->get( 'merchant_id' ),
-				'description' => __( 'Given to merchant by Hutko.', 'hutko-fluentcart-payment-gateway' ),
+				'description' => __( 'Given to merchant by hutko.', 'hutko-fluentcart-payment-gateway' ),
 			),
 			'secret_key'        => array(
 				'type'        => 'text',
 				'label'       => __( 'Secret Key', 'hutko-fluentcart-payment-gateway' ),
 				'value'       => $this->settings->get( 'secret_key' ),
-				'description' => __( 'Given to merchant by Hutko.', 'hutko-fluentcart-payment-gateway' ),
+				'description' => __( 'Given to merchant by hutko.', 'hutko-fluentcart-payment-gateway' ),
 			),
 			'integration_type'  => array(
 				'type'        => 'radio',
@@ -362,7 +362,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 					'hosted'   => __( 'Hosted (redirect)', 'hutko-fluentcart-payment-gateway' ),
 					'embedded' => __( 'Embedded (on-site widget)', 'hutko-fluentcart-payment-gateway' ),
 				),
-				'description' => __( 'Choose between redirecting to Hutko or embedding its widget on your site.', 'hutko-fluentcart-payment-gateway' ),
+				'description' => __( 'Choose between redirecting to hutko or embedding its widget on your site.', 'hutko-fluentcart-payment-gateway' ),
 			),
 			'recurrent_payment' => array(
 				'type'        => 'checkbox',
@@ -374,7 +374,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 				'type'  => 'html_attr',
 				'label' => __( 'Callback URL', 'hutko-fluentcart-payment-gateway' ),
 				'value' => '<p>' . __( 'The server-callback URL is sent automatically with every payment request — you do not need to configure anything in the Hutko merchant portal.', 'hutko-fluentcart-payment-gateway' ) . '</p>'
-					. '<p>' . __( 'Shown here for reference / as a fallback if you want to hardcode it in Hutko:', 'hutko-fluentcart-payment-gateway' ) . '</p>'
+					. '<p>' . __( 'Shown here for reference / as a fallback if you want to hardcode it in hutko:', 'hutko-fluentcart-payment-gateway' ) . '</p>'
 					. '<code>' . esc_url( site_url( '?fluent-cart=fct_payment_listener_ipn&method=' . HUTKO_FC_GATEWAY_SLUG ) ) . '</code>',
 			),
 		);
@@ -404,7 +404,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 
 		return array(
 			'status'  => 'success',
-			'message' => __( 'Hutko settings validated.', 'hutko-fluentcart-payment-gateway' ),
+			'message' => __( 'hutko settings validated.', 'hutko-fluentcart-payment-gateway' ),
 		);
 	}
 
@@ -447,7 +447,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 		$meta  = is_array( $transaction->meta ) ? $transaction->meta : array();
 		$token = $meta[ self::META_HUTKO_CHECKOUT_TOKEN ] ?? '';
 		if ( empty( $token ) ) {
-			wp_die( esc_html__( 'Hutko checkout token is missing.', 'hutko-fluentcart-payment-gateway' ) );
+			wp_die( esc_html__( 'hutko checkout token is missing.', 'hutko-fluentcart-payment-gateway' ) );
 		}
 
 		$args = array(
@@ -502,7 +502,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 			} catch ( Exception $e ) {
 				if ( function_exists( 'fluent_cart_error_log' ) ) {
 					fluent_cart_error_log(
-						'Hutko Renewal Error',
+						'hutko Renewal Error',
 						sprintf( 'Subscription #%d: %s', $subscription->id, $e->getMessage() )
 					);
 				}
@@ -616,7 +616,7 @@ class Hutko_FC_Gateway extends AbstractPaymentGateway {
 					array(
 						'message'       => sprintf(
 							/* translators: 1) amount 2) currency 3) payment id */
-							__( 'Charge successful: %1$s %2$s. Hutko ID: %3$s', 'hutko-fluentcart-payment-gateway' ),
+							__( 'Charge successful: %1$s %2$s. hutko ID: %3$s', 'hutko-fluentcart-payment-gateway' ),
 							$amount,
 							$order->currency,
 							$result->payment_id ?? ''

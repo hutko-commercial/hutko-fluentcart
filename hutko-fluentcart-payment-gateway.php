@@ -151,7 +151,7 @@ if ( ! class_exists( 'Hutko_FC' ) ) {
 		public function noticeFluentCartMissing() {
 			echo '<div class="notice notice-error"><p>'
 				. esc_html__(
-					'Hutko payment for FluentCart requires the FluentCart plugin to be installed and active.',
+					'hutko payment for FluentCart requires the FluentCart plugin to be installed and active.',
 					'hutko-fluentcart-payment-gateway'
 				)
 				. '</p></div>';

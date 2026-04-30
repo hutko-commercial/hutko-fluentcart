@@ -13,12 +13,12 @@ msgstr ""
 "X-Domain: hutko-fluentcart-payment-gateway\n"
 
 #: includes/class-hutko-fc-api.php
-msgid "Hutko API Return code is %s. Please try again later."
-msgstr "API Hutko повернув код %s. Спробуйте пізніше."
+msgid "hutko API Return code is %s. Please try again later."
+msgstr "API hutko повернув код %s. Спробуйте пізніше."
 
 #: includes/class-hutko-fc-api.php
-msgid "Unknown Hutko API answer."
-msgstr "Невідома відповідь API Hutko."
+msgid "Unknown hutko API answer."
+msgstr "Невідома відповідь API hutko."
 
 #: includes/class-hutko-fc-api.php
 msgid "Empty request body."
@@ -33,12 +33,12 @@ msgid "Signature is not valid"
 msgstr "Невірний підпис"
 
 #: includes/class-hutko-fc-gateway.php
-msgid "Cards, Apple Pay, Google Pay via Hutko"
-msgstr "Картки, Apple Pay, Google Pay через Hutko"
+msgid "Cards, Apple Pay, Google Pay via hutko"
+msgstr "Картки, Apple Pay, Google Pay через hutko"
 
 #: includes/class-hutko-fc-gateway.php
-msgid "Redirecting to Hutko..."
-msgstr "Перенаправлення на Hutko..."
+msgid "Redirecting to hutko..."
+msgstr "Перенаправлення на hutko..."
 
 #: includes/class-hutko-fc-gateway.php
 msgid "Order #%s"
@@ -49,7 +49,7 @@ msgid "Order info retrieved!"
 msgstr "Інформацію про замовлення отримано!"
 
 #: includes/class-hutko-fc-gateway.php
-msgid "No Hutko order ID stored on this transaction."
+msgid "No hutko order ID stored on this transaction."
 msgstr "У цій транзакції немає збереженого ID замовлення Hutko."
 
 #: includes/class-hutko-fc-gateway.php
@@ -57,28 +57,28 @@ msgid "Refund amount is required."
 msgstr "Необхідно вказати суму повернення."
 
 #: includes/class-hutko-fc-gateway.php
-msgid "Refund failed. Hutko status: %s"
-msgstr "Повернення не вдалося. Статус Hutko: %s"
+msgid "Refund failed. hutko status: %s"
+msgstr "Повернення не вдалося. Статус hutko: %s"
 
 #: includes/class-hutko-fc-gateway.php
-msgid "Enable Hutko"
-msgstr "Увімкнути Hutko"
+msgid "Enable hutko"
+msgstr "Увімкнути hutko"
 
 #: includes/class-hutko-fc-gateway.php
 msgid "Test mode"
 msgstr "Тестовий режим"
 
 #: includes/class-hutko-fc-gateway.php
-msgid "Use Hutko test merchant credentials."
-msgstr "Використовувати тестові облікові дані мерчанта Hutko."
+msgid "Use hutko test merchant credentials."
+msgstr "Використовувати тестові облікові дані мерчанта hutko."
 
 #: includes/class-hutko-fc-gateway.php
 msgid "Merchant ID"
 msgstr "ID мерчанта"
 
 #: includes/class-hutko-fc-gateway.php
-msgid "Given to merchant by Hutko."
-msgstr "Надається мерчанту Hutko."
+msgid "Given to merchant by hutko."
+msgstr "Надається мерчанту hutko."
 
 #: includes/class-hutko-fc-gateway.php
 msgid "Secret Key"
@@ -90,7 +90,7 @@ msgstr "Режим оплати"
 
 #: includes/class-hutko-fc-gateway.php
 msgid "Hosted (redirect)"
-msgstr "На стороні Hutko (перенаправлення)"
+msgstr "На стороні hutko (перенаправлення)"
 
 #: includes/class-hutko-fc-gateway.php
 msgid "Embedded (on-site widget)"
@@ -133,8 +133,8 @@ msgid "Merchant ID must be numeric."
 msgstr "ID мерчанта повинен бути числовим."
 
 #: includes/class-hutko-fc-gateway.php
-msgid "Hutko settings validated."
-msgstr "Налаштування Hutko перевірено."
+msgid "hutko settings validated."
+msgstr "Налаштування hutko перевірено."
 
 #: includes/class-hutko-fc-gateway.php
 msgid "Missing transaction reference."
@@ -177,8 +177,8 @@ msgid "Manual charge for order #%d"
 msgstr "Ручне списання для замовлення №%d"
 
 #: includes/class-hutko-fc-gateway.php
-msgid "Charge successful: %1$s %2$s. Hutko ID: %3$s"
-msgstr "Списання успішне: %1$s %2$s. ID Hutko: %3$s"
+msgid "Charge successful: %1$s %2$s. hutko ID: %3$s"
+msgstr "Списання успішне: %1$s %2$s. ID hutko: %3$s"
 
 #: includes/class-hutko-fc-gateway.php
 msgid "Manual charge failed. Status: %s"
@@ -189,9 +189,9 @@ msgid "Settings"
 msgstr "Налаштування"
 
 #: hutko-fluentcart-payment-gateway.php
-msgid "The minimum PHP version required for Hutko FluentCart Payment Gateway is %1$s. You are running %2$s."
-msgstr "Мінімальна версія PHP для Hutko FluentCart Payment Gateway — %1$s. У вас встановлено %2$s."
+msgid "The minimum PHP version required for hutko FluentCart Payment Gateway is %1$s. You are running %2$s."
+msgstr "Мінімальна версія PHP для hutko FluentCart Payment Gateway — %1$s. У вас встановлено %2$s."
 
 #: hutko-fluentcart-payment-gateway.php
-msgid "Hutko payment for FluentCart requires the FluentCart plugin to be installed and active."
-msgstr "Для роботи Hutko payment for FluentCart потрібен встановлений та активний плагін FluentCart."
+msgid "hutko payment for FluentCart requires the FluentCart plugin to be installed and active."
+msgstr "Для роботи hutko payment for FluentCart потрібен встановлений та активний плагін FluentCart."
